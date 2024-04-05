@@ -6,6 +6,7 @@ $totalApproved = 0;
 $totalPending = 0;
 $totalRejected = 0;
 
+
 try {
     // Database connection parameters
     $host = 'localhost'; 
@@ -29,6 +30,7 @@ try {
     // Count rejected leave requests
     $stmt_rejected = $db->query("SELECT COUNT(*) as total FROM leavereq WHERE status = 'Rejected'");
     $totalRejected = $stmt_rejected->fetch(PDO::FETCH_ASSOC)['total'];
+    $totalAsWhole=$totalApproved+$totalPending+$totalRejected;
 
 } catch (PDOException $e) {
     // Handle database connection errors
@@ -178,10 +180,11 @@ try {
                 <div class="card mb-4 leave-card">
                     <div class="card-header">Leave Requests</div>
                     <div class="card-body">
-                        <h4>Total Requests</h4>
+                        <h4>Total Active Requests: <?php echo $totalAsWhole; ?></h4>
                         <p class="approved">Approved: <?php echo $totalApproved; ?></p>
                         <p class="pending">Pending: <?php echo $totalPending; ?></p>
                         <p class="rejected">Rejected: <?php echo $totalRejected; ?></p>
+                        
                     </div>
                 </div>
             </div>

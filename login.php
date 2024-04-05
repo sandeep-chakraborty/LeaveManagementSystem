@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
     </style>
 </head>
 <body>
@@ -189,10 +189,7 @@ if (isset($_POST['submit'])) {
 
                             <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
-
                         <a href="signup.php" class="btn btn-secondary btn-block mt-3">Not signed in? Sign up</a>
-                        
-                        <!-- Button for principal login -->
                         <a href="rootAdmin.php" class="btn btn-info btn-block mt-3">Principal Login</a>
                         <a href="adminLogin.php" class="btn btn-info btn-block mt-3">Admin Login</a>
                     </div>
