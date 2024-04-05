@@ -198,8 +198,34 @@ try {
             color: #dc3545;
             font-weight: bold;
         }
+        .b {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .b a {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .b a:hover {
+            background-color: #c82333;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
     <div class="container">
@@ -207,7 +233,8 @@ try {
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="card-title text-center mb-4">Leave Request</h1>
+                    <h1 class="card-title text-center mb-4">Leave Request <a href="logout.php" class="btn btn-danger b"><i class="ri-logout-box-r-line"></i></a></h1>
+                        
                         <?php if (isset($user)): ?>
                             <p><strong>Name:</strong> <?php echo $user['name']; ?></p>
                             <p><strong>Semester:</strong> <?php echo $user['semester']; ?></p>
@@ -277,6 +304,7 @@ try {
                     </tbody>
                 </table>
             </div>
+            
         </div>
     </div>
 

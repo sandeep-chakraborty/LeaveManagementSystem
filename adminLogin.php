@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
                     header('Location: admin_dashboard.php');
                     exit;
                 } else {
-                    $errors[] = 'Invalid username or password.';
+                    $errors[] = 'Invalid password,Contact Principal for the password to your corresponding department';
                 }
             }
         }
@@ -189,7 +189,6 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
